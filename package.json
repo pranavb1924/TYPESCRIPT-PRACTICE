@@ -4,6 +4,9 @@
   "description": "Learning TypeScript in 2026, one lesson at a time",
   "private": true,
   "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@types/node": "^22.19.3",
     "tsx": "^4.21.0",
