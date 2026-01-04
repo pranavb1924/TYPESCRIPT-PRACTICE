@@ -1,0 +1,11 @@
+{
+  "name": "typescript-practice",
+  "version": "1.0.0",
+  "description": "Learning TypeScript in 2026, one lesson at a time",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
