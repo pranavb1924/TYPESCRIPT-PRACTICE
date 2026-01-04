@@ -1,0 +1,28 @@
+{
+  // Settings for type-checking every lesson in this repo.
+  // Check everything with: npx tsc --noEmit
+  "compilerOptions": {
+    // Modern JavaScript output and built-ins (Node 22 supports ES2024).
+    "target": "ES2024",
+    "lib": ["ES2024"],
+
+    // Use Node's rules for ES modules ("type": "module" in package.json),
+    // and treat every file as its own module so lessons can reuse names.
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+
+    // strict turns on all the important checks, like catching null/undefined.
+    "strict": true,
+    // Report a switch case that runs code and then falls into the next case.
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    // Skip checking the .d.ts files inside node_modules (faster).
+    "skipLibCheck": true,
+
+    // Where compiled JavaScript goes if we ever run tsc without --noEmit.
+    "outDir": "dist"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
