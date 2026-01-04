@@ -5,6 +5,8 @@
     // Modern JavaScript output and built-ins (Node 22 supports ES2024).
     "target": "ES2024",
     "lib": ["ES2024"],
+    // Type definitions for Node.js itself: console, process, node:fs, ...
+    "types": ["node"],
 
     // Use Node's rules for ES modules ("type": "module" in package.json),
     // and treat every file as its own module so lessons can reuse names.
