@@ -25,3 +25,16 @@ console.log(isLearning, isFinished);
 console.log(typeof firstName); // string
 console.log(typeof age); // number
 console.log(typeof isFinished); // boolean
+
+// null means "deliberately empty". undefined means "no value yet".
+const middleName: null = null;
+const nickname: undefined = undefined;
+console.log(middleName, nickname);
+console.log(typeof nickname); // undefined
+console.log(typeof middleName); // object (a famous old JavaScript quirk!)
+
+// TypeScript won't let you mix types up. Each of these is a type error:
+// const wrong: number = "27";
+//   -> Type 'string' is not assignable to type 'number'.
+// const alsoWrong: boolean = "true";
+//   -> "true" in quotes is a string, not a boolean.
