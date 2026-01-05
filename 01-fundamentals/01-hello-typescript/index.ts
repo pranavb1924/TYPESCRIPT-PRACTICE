@@ -14,3 +14,18 @@ console.log("TypeScript is", "JavaScript", "+", "types");
   Block comments can span
   several lines.
 */
+
+// How this file runs:
+// - tsx runs TypeScript directly. It strips out the types and runs the
+//   JavaScript that's left, but it does NOT check the types.
+// - tsc is the TypeScript compiler. `npx tsc --noEmit` checks every file in
+//   the repo for type errors without writing any output files.
+// So: tsx to run, tsc to check. (`npm run typecheck` runs the same check.)
+
+console.log("shout".toUpperCase());
+
+// tsc catches mistakes before the code ever runs. Uncomment the line below
+// and run `npx tsc --noEmit` to see:
+//   Property 'toUppercase' does not exist on type 'string'.
+//   Did you mean 'toUpperCase'?
+// console.log("shout".toUppercase());
