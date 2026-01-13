@@ -38,3 +38,10 @@ console.log(a !== b); // true
 // Always use === and !==. The loose == converts types before comparing,
 // so in plain JavaScript 5 == "5" is true. TypeScript reports that as an
 // error, because a number and a string can never be equal.
+
+// Logical operators combine booleans
+const hasTicket: boolean = true;
+const isMember: boolean = false;
+console.log("AND:", hasTicket && isMember); // false: needs both
+console.log("OR:", hasTicket || isMember); // true: needs at least one
+console.log("NOT:", !isMember); // true: flips it
