@@ -16,3 +16,11 @@ const quantity: number = 3;
 console.log(`Total: ${price * quantity}`);
 console.log(`Next up: lesson ${lessonsDone + 1}`);
 console.log(`More than 5 done? ${lessonsDone > 5}`);
+
+// Template literals can span several lines, line breaks included
+const receipt = `
+  Coffee x ${quantity}
+  ------------
+  Total: $${price * quantity}
+`;
+console.log(receipt);
