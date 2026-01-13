@@ -21,3 +21,20 @@ console.log((2 + 3) * 4); // 20
 // + also joins strings
 console.log("Type" + "Script"); // TypeScript
 console.log("Lesson " + 5); // the number turns into text: "Lesson 5"
+
+// Assignment shortcuts
+let points = 10;
+points += 5; // same as points = points + 5
+points -= 3;
+points *= 2;
+points++; // add 1
+console.log("points:", points); // 25
+
+// Comparisons give back a boolean
+console.log(a > b, a < b); // true false
+console.log(a >= 17, b <= 4); // true false
+console.log(a === 17); // true: same value (and same type)
+console.log(a !== b); // true
+// Always use === and !==. The loose == converts types before comparing,
+// so in plain JavaScript 5 == "5" is true. TypeScript reports that as an
+// error, because a number and a string can never be equal.
