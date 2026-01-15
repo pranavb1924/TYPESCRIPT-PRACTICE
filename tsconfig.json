@@ -13,6 +13,8 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "moduleDetection": "force",
+    // Allow imports that end in .ts (rewritten to .js if tsc ever compiles).
+    "rewriteRelativeImportExtensions": true,
 
     // strict turns on all the important checks, like catching null/undefined.
     "strict": true,
