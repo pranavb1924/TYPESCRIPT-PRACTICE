@@ -9,3 +9,10 @@ import { ask } from "../../utils/input.ts";
 
 const name = ask("What's your name? ");
 console.log(`Nice to meet you, ${name}!`);
+
+// ask() always gives back a string, even when the user types digits.
+const ageText = ask("How old are you? ");
+console.log(typeof ageText); // string
+// "27" + 1 would be "271", so convert the text to a number first:
+const age = Number(ageText);
+console.log(`Next year you'll be ${age + 1}.`);
