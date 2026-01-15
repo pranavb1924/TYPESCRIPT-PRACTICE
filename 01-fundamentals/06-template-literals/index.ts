@@ -24,3 +24,14 @@ const receipt = `
   Total: $${price * quantity}
 `;
 console.log(receipt);
+
+// Formatting numbers
+const share: number = 10 / 3;
+console.log(share); // 3.3333333333333335
+console.log(share.toFixed(2)); // 3.33 (toFixed gives back a string)
+console.log(`Each pays $${share.toFixed(2)}`);
+
+// toLocaleString adds thousands separators.
+// (The underscores in 4_500_000 are only there to make it easier to read.)
+const population: number = 4_500_000;
+console.log(population.toLocaleString("en-US")); // 4,500,000
