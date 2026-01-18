@@ -13,7 +13,11 @@ const people = Number(ask("Number of people: "));
 const tip = bill * (tipPercent / 100);
 const total = bill + tip;
 const perPerson = total / people;
+// Round each share up to the next cent so the bill is always covered.
+const perPersonRounded = Math.ceil(perPerson * 100) / 100;
 
-console.log(`Tip: $${tip.toFixed(2)}`);
-console.log(`Total: $${total.toFixed(2)}`);
-console.log(`Each person pays: $${perPerson.toFixed(2)}`);
+console.log("");
+console.log(`Bill:       $${bill.toFixed(2)}`);
+console.log(`Tip:        $${tip.toFixed(2)} (${tipPercent}%)`);
+console.log(`Total:      $${total.toFixed(2)}`);
+console.log(`Per person: $${perPersonRounded.toFixed(2)} (${people} people)`);
