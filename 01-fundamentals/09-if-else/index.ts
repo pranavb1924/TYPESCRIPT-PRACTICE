@@ -52,3 +52,9 @@ if (nickname) {
 } else {
   console.log("No nickname set.");
 }
+
+// The ternary operator is a one-line if/else that produces a value:
+//   condition ? valueIfTrue : valueIfFalse
+const stock: number = 0;
+const label = stock > 0 ? "In stock" : "Sold out";
+console.log(label);
