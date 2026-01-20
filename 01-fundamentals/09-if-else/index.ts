@@ -43,3 +43,12 @@ if (isWeekend || isHoliday) {
 if (!isWeekend) {
   console.log("It's a weekday.");
 }
+
+// Truthy and falsy: inside a condition, false, 0, "" (empty string), null,
+// undefined and NaN all count as false. Every other value counts as true.
+const nickname: string = "";
+if (nickname) {
+  console.log(`Hi, ${nickname}!`);
+} else {
+  console.log("No nickname set.");
+}
