@@ -2,6 +2,8 @@
 // Run code only when a condition is true.
 // Run it: npx tsx 01-fundamentals/09-if-else/index.ts
 
+import { ask } from "../../utils/input.ts";
+
 // if runs its block only when the condition is true
 const temperature: number = 31;
 if (temperature > 30) {
@@ -58,3 +60,12 @@ if (nickname) {
 const stock: number = 0;
 const label = stock > 0 ? "In stock" : "Sold out";
 console.log(label);
+
+// Checking what the user typed
+const text = ask("Pick a whole number from 1 to 10: ");
+const pick = Number(text);
+if (text === "" || Number.isNaN(pick)) {
+  console.log("That's not a number.");
+} else {
+  console.log(`You picked ${pick}.`);
+}
