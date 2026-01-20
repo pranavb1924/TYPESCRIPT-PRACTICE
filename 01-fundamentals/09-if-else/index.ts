@@ -27,3 +27,19 @@ if (score >= 90) {
 } else {
   console.log("Grade: below C");
 }
+
+// Combine conditions with && (and), || (or) and ! (not)
+const age: number = 19;
+const hasTicket: boolean = true;
+if (age >= 18 && hasTicket) {
+  console.log("Welcome to the concert!");
+}
+
+const isWeekend: boolean = false;
+const isHoliday: boolean = true;
+if (isWeekend || isHoliday) {
+  console.log("No work today.");
+}
+if (!isWeekend) {
+  console.log("It's a weekday.");
+}
