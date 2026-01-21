@@ -66,6 +66,9 @@ const text = ask("Pick a whole number from 1 to 10: ");
 const pick = Number(text);
 if (text === "" || Number.isNaN(pick)) {
   console.log("That's not a number.");
+} else if (!Number.isInteger(pick) || pick < 1 || pick > 10) {
+  console.log("That's not a whole number from 1 to 10.");
 } else {
-  console.log(`You picked ${pick}.`);
+  const kind = pick % 2 === 0 ? "even" : "odd";
+  console.log(`You picked ${pick}, which is ${kind}.`);
 }
