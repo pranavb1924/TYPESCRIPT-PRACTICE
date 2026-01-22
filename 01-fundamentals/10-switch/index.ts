@@ -66,3 +66,27 @@ switch (command) {
   default:
     console.log(`Unknown command: "${command}"`);
 }
+
+// Month number to season, using stacked cases
+const month = Number(ask("Month number (1-12): "));
+let season: string;
+switch (month) {
+  case 12:
+  case 1:
+  case 2:
+    season = "winter";
+    break;
+  case 3:
+  case 4:
+  case 5:
+    season = "spring";
+    break;
+  case 6:
+  case 7:
+  case 8:
+    season = "summer";
+    break;
+  default:
+    season = "fall";
+}
+console.log(`Month ${month} is in ${season}.`);
