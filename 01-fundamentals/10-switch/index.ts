@@ -42,3 +42,8 @@ switch (dayNumber) {
   default:
     console.log("It's a weekday.");
 }
+
+// break ends the switch. Without it, the code "falls through" and keeps
+// running the next case too. That's almost always a bug, so tsconfig.json
+// turns on "noFallthroughCasesInSwitch" and tsc reports any case that runs
+// some code and then forgets its break.
