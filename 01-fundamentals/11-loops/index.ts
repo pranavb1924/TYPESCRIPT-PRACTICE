@@ -12,3 +12,10 @@ for (let i = 3; i > 0; i--) {
   console.log(`${i}...`);
 }
 console.log("Liftoff!");
+
+// Adding up 1 + 2 + ... + 100
+let sum = 0;
+for (let n = 1; n <= 100; n++) {
+  sum += n;
+}
+console.log(`1 + 2 + ... + 100 = ${sum}`);
