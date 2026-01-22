@@ -32,3 +32,13 @@ switch (dayNumber) {
     dayName = "not a day";
 }
 console.log(`Day ${dayNumber} is ${dayName}.`);
+
+// Stack cases with no code between them to share the same code.
+switch (dayNumber) {
+  case 0:
+  case 6:
+    console.log("It's the weekend!");
+    break;
+  default:
+    console.log("It's a weekday.");
+}
