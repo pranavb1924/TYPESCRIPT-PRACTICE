@@ -86,7 +86,16 @@ switch (month) {
   case 8:
     season = "summer";
     break;
-  default:
+  case 9:
+  case 10:
+  case 11:
     season = "fall";
+    break;
+  default:
+    season = "";
 }
-console.log(`Month ${month} is in ${season}.`);
+if (season === "") {
+  console.log(`${month} isn't a month number.`);
+} else {
+  console.log(`Month ${month} is in ${season}.`);
+}
