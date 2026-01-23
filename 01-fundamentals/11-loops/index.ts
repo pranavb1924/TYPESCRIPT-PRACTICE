@@ -32,6 +32,14 @@ while (savings < 200) {
 }
 console.log(`$100 doubles after ${years} years ($${savings.toFixed(2)}).`);
 
+// break jumps out of a loop early
+for (let n = 50; n < 100; n++) {
+  if (n % 7 === 0) {
+    console.log(`First multiple of 7 from 50 up: ${n}`);
+    break;
+  }
+}
+
 // do...while runs its body once before checking the condition, so it's a
 // natural fit for "keep asking until the answer is OK".
 let answer = "";
