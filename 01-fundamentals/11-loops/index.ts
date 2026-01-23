@@ -50,6 +50,15 @@ for (let n = 1; n <= 10; n++) {
 }
 console.log(`Even numbers: ${evens}`);
 
+// A loop inside a loop: a small times table
+for (let row = 1; row <= 4; row++) {
+  let line = "";
+  for (let col = 1; col <= 4; col++) {
+    line += `${row * col}\t`;
+  }
+  console.log(line);
+}
+
 // do...while runs its body once before checking the condition, so it's a
 // natural fit for "keep asking until the answer is OK".
 let answer = "";
