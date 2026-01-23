@@ -8,6 +8,8 @@ console.log("Enter one number per line. Leave a line empty to finish.");
 
 let count = 0;
 let sum = 0;
+let min = Infinity;
+let max = -Infinity;
 
 while (true) {
   const text = ask(`#${count + 1}: `);
@@ -18,7 +20,15 @@ while (true) {
   const value = Number(text);
   count++;
   sum += value;
+  if (value < min) {
+    min = value;
+  }
+  if (value > max) {
+    max = value;
+  }
 }
 
 console.log(`Count: ${count}`);
 console.log(`Sum: ${sum}`);
+console.log(`Min: ${min}`);
+console.log(`Max: ${max}`);
