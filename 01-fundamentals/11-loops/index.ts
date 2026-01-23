@@ -40,6 +40,16 @@ for (let n = 50; n < 100; n++) {
   }
 }
 
+// continue skips the rest of this round and moves on to the next one
+let evens = "";
+for (let n = 1; n <= 10; n++) {
+  if (n % 2 !== 0) {
+    continue;
+  }
+  evens += `${n} `;
+}
+console.log(`Even numbers: ${evens}`);
+
 // do...while runs its body once before checking the condition, so it's a
 // natural fit for "keep asking until the answer is OK".
 let answer = "";
