@@ -19,3 +19,13 @@ for (let n = 1; n <= 100; n++) {
   sum += n;
 }
 console.log(`1 + 2 + ... + 100 = ${sum}`);
+
+// while loop: repeats as long as its condition is true. Good for when you
+// don't know ahead of time how many rounds you need.
+let savings = 100;
+let years = 0;
+while (savings < 200) {
+  savings *= 1.07; // 7% growth per year
+  years++;
+}
+console.log(`$100 doubles after ${years} years ($${savings.toFixed(2)}).`);
