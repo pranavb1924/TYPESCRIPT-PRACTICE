@@ -2,6 +2,8 @@
 // for, while and do...while, plus break and continue.
 // Run it: npx tsx 01-fundamentals/11-loops/index.ts
 
+import { ask } from "../../utils/input.ts";
+
 // for loop: for (start; keep going while this is true; after each round)
 for (let lap = 1; lap <= 5; lap++) {
   console.log(`Lap ${lap}`);
@@ -29,3 +31,11 @@ while (savings < 200) {
   years++;
 }
 console.log(`$100 doubles after ${years} years ($${savings.toFixed(2)}).`);
+
+// do...while runs its body once before checking the condition, so it's a
+// natural fit for "keep asking until the answer is OK".
+let answer = "";
+do {
+  answer = ask("Type yes to finish the lesson: ");
+} while (answer !== "yes");
+console.log("Lesson complete!");
