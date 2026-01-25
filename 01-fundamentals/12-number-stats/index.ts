@@ -18,6 +18,11 @@ while (true) {
   }
 
   const value = Number(text);
+  if (Number.isNaN(value)) {
+    console.log(`  "${text}" isn't a number, skipping it.`);
+    continue;
+  }
+
   count++;
   sum += value;
   if (value < min) {
