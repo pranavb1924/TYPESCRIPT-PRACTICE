@@ -33,8 +33,12 @@ while (true) {
   }
 }
 
-console.log(`Count: ${count}`);
-console.log(`Sum: ${sum}`);
-console.log(`Min: ${min}`);
-console.log(`Max: ${max}`);
-console.log(`Average: ${sum / count}`);
+if (count === 0) {
+  console.log("No numbers entered.");
+} else {
+  console.log(`Count: ${count}`);
+  console.log(`Sum: ${sum}`);
+  console.log(`Min: ${min}`);
+  console.log(`Max: ${max}`);
+  console.log(`Average: ${(sum / count).toFixed(2)}`);
+}
