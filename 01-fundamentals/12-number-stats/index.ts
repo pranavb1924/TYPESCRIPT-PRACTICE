@@ -37,3 +37,4 @@ console.log(`Count: ${count}`);
 console.log(`Sum: ${sum}`);
 console.log(`Min: ${min}`);
 console.log(`Max: ${max}`);
+console.log(`Average: ${sum / count}`);
