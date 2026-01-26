@@ -1,0 +1,20 @@
+// Project: Guess & Calc
+// A number guessing game for the terminal (a calculator is coming next).
+// Run it: npx tsx 01-fundamentals/13-project-guess-and-calc/index.ts
+
+import { ask } from "../../utils/input.ts";
+
+const MIN = 1;
+const MAX = 100;
+
+// Math.random() gives a decimal from 0 up to (but not including) 1.
+// Scale it up to MIN-MAX and drop the decimals with Math.floor().
+const secret = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+
+console.log(`I'm thinking of a number from ${MIN} to ${MAX}.`);
+const guess = Number(ask("Your guess: "));
+if (guess === secret) {
+  console.log("Wow, you got it on the first try!");
+} else {
+  console.log(`Nope, it was ${secret}.`);
+}
