@@ -15,8 +15,10 @@ console.log(`I'm thinking of a number from ${MIN} to ${MAX}.`);
 let guess = 0;
 while (guess !== secret) {
   guess = Number(ask("Your guess: "));
-  if (guess !== secret) {
-    console.log("Nope, try again.");
+  if (guess < secret) {
+    console.log("Too low!");
+  } else if (guess > secret) {
+    console.log("Too high!");
   }
 }
 console.log("You got it!");
