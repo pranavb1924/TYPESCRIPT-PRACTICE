@@ -15,7 +15,14 @@ console.log(`I'm thinking of a number from ${MIN} to ${MAX}.`);
 let guess = 0;
 let attempts = 0;
 while (guess !== secret) {
-  guess = Number(ask("Your guess: "));
+  const text = ask("Your guess: ");
+  const value = Number(text);
+  if (text === "" || !Number.isInteger(value) || value < MIN || value > MAX) {
+    console.log(`Please enter a whole number from ${MIN} to ${MAX}.`);
+    continue;
+  }
+
+  guess = value;
   attempts++;
   if (guess < secret) {
     console.log("Too low!");
