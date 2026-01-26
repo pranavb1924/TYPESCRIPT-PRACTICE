@@ -12,9 +12,11 @@ const MAX = 100;
 const secret = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
 
 console.log(`I'm thinking of a number from ${MIN} to ${MAX}.`);
-const guess = Number(ask("Your guess: "));
-if (guess === secret) {
-  console.log("Wow, you got it on the first try!");
-} else {
-  console.log(`Nope, it was ${secret}.`);
+let guess = 0;
+while (guess !== secret) {
+  guess = Number(ask("Your guess: "));
+  if (guess !== secret) {
+    console.log("Nope, try again.");
+  }
 }
+console.log("You got it!");
