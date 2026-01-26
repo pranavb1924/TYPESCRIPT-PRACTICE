@@ -13,12 +13,14 @@ const secret = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
 
 console.log(`I'm thinking of a number from ${MIN} to ${MAX}.`);
 let guess = 0;
+let attempts = 0;
 while (guess !== secret) {
   guess = Number(ask("Your guess: "));
+  attempts++;
   if (guess < secret) {
     console.log("Too low!");
   } else if (guess > secret) {
     console.log("Too high!");
   }
 }
-console.log("You got it!");
+console.log(`You got it in ${attempts} tries!`);
