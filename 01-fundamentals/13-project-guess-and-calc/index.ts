@@ -78,6 +78,7 @@ while (running) {
       const b = Number(ask("Second number: "));
 
       let result = 0;
+      let valid = true;
       switch (operator) {
         case "+":
           result = a + b;
@@ -89,10 +90,20 @@ while (running) {
           result = a * b;
           break;
         case "/":
-          result = a / b;
+          if (b === 0) {
+            console.log("Can't divide by zero.");
+            valid = false;
+          } else {
+            result = a / b;
+          }
           break;
+        default:
+          console.log(`Unknown operator "${operator}".`);
+          valid = false;
       }
-      console.log(`${a} ${operator} ${b} = ${result}`);
+      if (valid) {
+        console.log(`${a} ${operator} ${b} = ${result}`);
+      }
       break;
     }
 
