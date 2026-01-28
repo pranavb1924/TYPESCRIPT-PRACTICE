@@ -8,6 +8,11 @@ const MIN = 1;
 const MAX = 100;
 const MAX_ATTEMPTS = 7;
 
+// Stats for this session
+let gamesPlayed = 0;
+let gamesWon = 0;
+let bestScore = 0; // fewest tries in a win (0 means no wins yet)
+
 let playAgain = true;
 while (playAgain) {
   // Math.random() gives a decimal from 0 up to (but not including) 1.
@@ -35,8 +40,15 @@ while (playAgain) {
     }
   }
 
+  gamesPlayed++;
   if (guess === secret) {
-    console.log(`You got it in ${attempts} tries!`);
+    gamesWon++;
+    const tries = attempts === 1 ? "try" : "tries";
+    console.log(`You got it in ${attempts} ${tries}!`);
+    if (bestScore === 0 || attempts < bestScore) {
+      bestScore = attempts;
+      console.log("New best score!");
+    }
   } else {
     console.log(`Out of tries! The number was ${secret}.`);
   }
@@ -45,3 +57,4 @@ while (playAgain) {
 }
 
 console.log("Thanks for playing!");
+console.log(`Games won: ${gamesWon} of ${gamesPlayed}`);
