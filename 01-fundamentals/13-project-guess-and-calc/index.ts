@@ -6,15 +6,17 @@ import { ask } from "../../utils/input.ts";
 
 const MIN = 1;
 const MAX = 100;
+const MAX_ATTEMPTS = 7;
 
 // Math.random() gives a decimal from 0 up to (but not including) 1.
 // Scale it up to MIN-MAX and drop the decimals with Math.floor().
 const secret = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
 
 console.log(`I'm thinking of a number from ${MIN} to ${MAX}.`);
+console.log(`You have ${MAX_ATTEMPTS} tries.`);
 let guess = 0;
 let attempts = 0;
-while (guess !== secret) {
+while (guess !== secret && attempts < MAX_ATTEMPTS) {
   const text = ask("Your guess: ");
   const value = Number(text);
   if (text === "" || !Number.isInteger(value) || value < MIN || value > MAX) {
@@ -30,4 +32,9 @@ while (guess !== secret) {
     console.log("Too high!");
   }
 }
-console.log(`You got it in ${attempts} tries!`);
+
+if (guess === secret) {
+  console.log(`You got it in ${attempts} tries!`);
+} else {
+  console.log(`Out of tries! The number was ${secret}.`);
+}
