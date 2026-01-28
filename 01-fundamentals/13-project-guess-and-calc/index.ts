@@ -26,10 +26,11 @@ while (guess !== secret && attempts < MAX_ATTEMPTS) {
 
   guess = value;
   attempts++;
+  const distance = Math.abs(secret - guess);
   if (guess < secret) {
-    console.log("Too low!");
+    console.log(distance <= 10 ? "Too low, but close!" : "Too low.");
   } else if (guess > secret) {
-    console.log("Too high!");
+    console.log(distance <= 10 ? "Too high, but close!" : "Too high.");
   }
 }
 
