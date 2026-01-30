@@ -74,9 +74,20 @@ while (running) {
     }
 
     case "2": {
-      const a = Number(ask("First number: "));
+      const firstText = ask("First number: ");
       const operator = ask("Operator (+ - * / % **): ");
-      const b = Number(ask("Second number: "));
+      const secondText = ask("Second number: ");
+      const a = Number(firstText);
+      const b = Number(secondText);
+      if (
+        firstText === "" ||
+        secondText === "" ||
+        Number.isNaN(a) ||
+        Number.isNaN(b)
+      ) {
+        console.log("Both values need to be numbers.");
+        break;
+      }
 
       let result = 0;
       let valid = true;
