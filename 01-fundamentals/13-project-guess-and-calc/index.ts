@@ -14,6 +14,7 @@ const MAX_ATTEMPTS = 7;
 let gamesPlayed = 0;
 let gamesWon = 0;
 let bestScore = 0; // fewest tries in a win (0 means no wins yet)
+let calculations = 0;
 
 console.log("=== Guess & Calc ===");
 
@@ -106,6 +107,7 @@ while (running) {
           valid = false;
       }
       if (valid) {
+        calculations++;
         console.log(`${a} ${operator} ${b} = ${result}`);
       }
       break;
@@ -122,3 +124,4 @@ while (running) {
 
 console.log("Thanks for playing!");
 console.log(`Games won: ${gamesWon} of ${gamesPlayed}`);
+console.log(`Calculations: ${calculations}`);
