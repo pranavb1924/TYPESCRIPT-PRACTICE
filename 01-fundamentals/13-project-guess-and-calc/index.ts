@@ -74,7 +74,7 @@ while (running) {
 
     case "2": {
       const a = Number(ask("First number: "));
-      const operator = ask("Operator (+ - * /): ");
+      const operator = ask("Operator (+ - * / % **): ");
       const b = Number(ask("Second number: "));
 
       let result = 0;
@@ -90,12 +90,16 @@ while (running) {
           result = a * b;
           break;
         case "/":
+        case "%":
           if (b === 0) {
             console.log("Can't divide by zero.");
             valid = false;
           } else {
-            result = a / b;
+            result = operator === "/" ? a / b : a % b;
           }
+          break;
+        case "**":
+          result = a ** b;
           break;
         default:
           console.log(`Unknown operator "${operator}".`);
