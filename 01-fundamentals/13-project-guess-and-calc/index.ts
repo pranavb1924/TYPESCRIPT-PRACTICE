@@ -136,7 +136,7 @@ while (running) {
       break;
 
     default:
-      console.log("Unknown option.");
+      console.log(`"${choice}" isn't an option. Type a number from 1 to 4.`);
   }
 }
 
