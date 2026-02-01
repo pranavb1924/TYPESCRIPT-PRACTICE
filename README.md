@@ -29,7 +29,7 @@ npm run typecheck
 ## Roadmap
 
 - [x] **Day 1:** Node, TypeScript and tsx setup
-- [ ] **01 Fundamentals** (Jan): types, inference, operators, template literals, console input, if/switch, loops
+- [x] **01 Fundamentals** (Jan): types, inference, operators, template literals, console input, if/switch, loops
   - Project: number guesser + calculator CLI
 - [ ] **02 Functions & Collections** (Feb): typed functions, parameters, arrow functions, arrays, tuples, objects, Map/Set, strings
   - Project: grade book
