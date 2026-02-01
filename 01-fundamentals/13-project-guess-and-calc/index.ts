@@ -23,7 +23,8 @@ while (running) {
   console.log("");
   console.log("1) Number guesser");
   console.log("2) Calculator");
-  console.log("3) Quit");
+  console.log("3) Stats");
+  console.log("4) Quit");
   const choice = ask("Choose an option: ");
 
   switch (choice) {
@@ -125,6 +126,12 @@ while (running) {
     }
 
     case "3":
+      console.log(`Games played: ${gamesPlayed} (won ${gamesWon})`);
+      console.log(`Best score:   ${bestScore === 0 ? "none yet" : bestScore}`);
+      console.log(`Calculations: ${calculations}`);
+      break;
+
+    case "4":
       running = false;
       break;
 
